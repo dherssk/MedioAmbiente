@@ -52,7 +52,7 @@
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">ADSI MEDIO AMBIENTE</h2>
                         <p class="text-white-50">
-                            Nunca digas nunca
+                            Enseñar a cuidar el medio ambiente es enseñar a valorar la vida.
                         </p>
                     </div>
                 </div>
@@ -67,14 +67,14 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="/img/bg-masthead.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <h4>Consejos y acciones para cuidar el medioambiente</h4>
+                            <p class="text-black-50 mb-0">Te proponemos varios consejos y acciones sencillas para cuidar el medio ambiente y transmitir valores positivos en ese sentido.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Project One Row-->
                     <div class="text-center">
-                        <button type="button" class="btn btn-primary" href="#about">Ruleta de concejos</button>
+                        <button type="button" id="btnRuletaConsejos" class="btn btn-primary" href="#about">Ruleta de concejos</button>
                         <br>
                         <br>
                     </div>
@@ -83,9 +83,8 @@
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white" id="idConsejo1"></h4>
-                                    <p class="mb-0 text-white-50" id="msConsejo1"></p>
+                                <div class="project-text w-100 my-auto text-center text-lg-left" id="consejo1">
+                                    
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
                             </div>
@@ -98,9 +97,7 @@
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white" id="idConsejo2"></h4>
-                                    <p class="mb-0 text-white-50" id="msConsejo2"></p>
+                                <div class="project-text w-100 my-auto text-center text-lg-right" id="consejo2">
                                     <hr class="d-none d-lg-block mb-0 me-0" />
                                 </div>
                             </div>
@@ -111,9 +108,9 @@
             <br>
             <br>
             <div class="text-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Agregar conseajo</button>
+                <button type="button" class="btn btn-primary" id="btnAddConsejo" data-bs-toggle="modal" data-bs-target="#frmConsejo" data-bs-whatever="@mdo">Agregar conseajo</button>
             </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="frmConsejo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -121,7 +118,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="frmEnviarConsejo">
                             <div class="mb-3">
                                 <label class="col-form-label">Email:</label>
                                 <input type="text" class="form-control" id="recipient-email"  placeholder="Opcional">
@@ -132,14 +129,15 @@
                         </div>
                         <div class="mb-3">
                             <label class="col-form-label">Consejo:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+                            <textarea class="form-control" id="message-text" minlength="30"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="btnCerrar" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Enviar</button>
-                    </div>
+                    
                     </div>
                 </div>
                 </div>
@@ -174,8 +172,6 @@
                                 <div class="text-center mb-3 mt-2 text-white">
                                     <div class="fw-bolder">¡El envío del formulario se ha realizado correctamente!
                                     </div>
-                                    Para activar este formulario, regístrese en!
-                                    <br />
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -224,9 +220,9 @@
                     </div>
                 </div>
                 <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                    <a class="mx-2" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </section>
@@ -241,5 +237,6 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>

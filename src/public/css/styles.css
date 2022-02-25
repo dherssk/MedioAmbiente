@@ -11686,3 +11686,13 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+#message-text{
+  border-color: var(--bs-red);
+}
+#message-text:invalid {
+  border: 2px dashed red;
+}
+#message-texts:invalid:focus {
+  background-image: linear-gradient(pink, lightgreen);
+}

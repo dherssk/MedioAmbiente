@@ -19,6 +19,10 @@ app.use(express.static(__dirname + '/public')) //seteamos la carpeta public para
 
 dotenv.config({path: './env/.env'}) //seteamos las variables de entorno
 
+
+//llamar al router
+app.use('/', require('./routes/routes'))
+
 app.listen(PUERTO, ()=>{
     console.log('Servidor ejecutandose en http://localhost:' + PUERTO)
 });
